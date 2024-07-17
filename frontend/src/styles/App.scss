@@ -1,0 +1,243 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  font-family: $font-family-base;
+  color: $color-p;
+}
+
+// ------------------Header---------------------------------------
+header {
+  position: fixed;
+  background-color: $gcolor-1;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 2.5rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 100;
+  box-shadow: 5px 5px 20px $gcolor-1;
+}
+
+// ---------------------Logo-------------------------------------
+.logo img {
+  width: 90px;
+}
+
+// ---------------------Desktop-----------------------------------
+nav {
+  ul {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    li {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      a {
+        text-decoration: none;
+        font-size: 3rem;
+        margin: 2rem;
+        font-family: $font-family-headline;
+        a:hover {
+          color: $color-2;
+        }
+      }
+    }
+  }
+}
+
+// -----------------BackgroundImage ------------------------------
+.background-image {
+  margin-top: 80px;
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+}
+
+// -----------------Background Main ------------------------------
+main {
+  background: linear-gradient(to bottom, $gcolor-3, $gcolor-2, $gcolor-1);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 5rem 1rem 20rem 1rem;
+  .container {
+    height: 100%;
+    font-size: 5rem;
+  }
+}
+
+// ---------------------------Footer---------------------
+footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background-color: $gcolor-1;
+  padding: 0 4rem 1.5rem 3rem;
+  box-shadow: 5px 5px 20px $gcolor-3;
+  .imprint a {
+    font-size: 2.5rem;
+    text-decoration: none;
+    font-family: $font-family-headline;
+    cursor: pointer;
+  }
+  .icons {
+    display: flex;
+    justify-content: center;
+    a {
+      font-size: 6rem;
+      margin: 0 1rem;
+      color: $color-4;
+    }
+  }
+  .copyright {
+    font-size: 2rem;
+  }
+  .imprint {
+    margin: 0 0 1rem 0;
+    a:hover,
+    .icons a .fa-instagram:hover,
+    .icons a .fa-youtube:hover {
+      color: $color-1;
+    }
+    .icons a .fa-twitter:hover,
+    .icons a .fa-linkedin:hover {
+      color: $color-2;
+    }
+  }
+}
+
+// -----------------------Responsive-------------------------------
+@media (min-width: 768px) {
+  #menu-btn {
+    display: none;
+  }
+  nav {
+    display: block;
+  }
+  main {
+    padding: 5rem 10rem 15rem 10rem;
+    .container {
+      padding-top: 7rem;
+      grid-template-rows: repeat(3, 40rem);
+      h2 {
+        font-size: 3rem;
+      }
+      .content-1 {
+        h1 {
+          font-size: 4rem;
+        }
+        h3 {
+          font-size: 2.5rem;
+        }
+        p {
+          font-size: 2rem;
+        }
+      }
+      .content-2 p,
+      .content-4 p {
+        font-size: 2rem;
+      }
+      .container-side {
+        padding-top: 12rem;
+        grid-template-rows: repeat(7, 40rem);
+        h2 {
+          font-size: 3rem;
+        }
+        .content-1 {
+          h1 {
+            font-size: 4rem;
+          }
+          h3 {
+            font-size: 2.5rem;
+          }
+          p {
+            font-size: 2rem;
+          }
+        }
+        .content-2 p,
+        .content-4 p,
+        .content-6 p,
+        .content-8 p,
+        .content-10 p,
+        .content-12 p {
+          font-size: 2rem;
+        }
+        aside img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  main {
+    padding: 5rem 10rem 15rem 10rem;
+    .container {
+      padding-top: 7rem;
+      grid-template-rows: repeat(3, 50rem);
+      h2 {
+        font-size: 4rem;
+      }
+      .content-1 {
+        h1 {
+          font-size: 5rem;
+        }
+        h3 {
+          font-size: 3.5rem;
+        }
+        p {
+          font-size: 2.5rem;
+        }
+      }
+      .content-2 p,
+      .content-4 p {
+        font-size: 2.5rem;
+      }
+      .container-side {
+        padding-top: 12rem;
+        grid-template-rows: repeat(7, 50rem);
+        h2 {
+          font-size: 4rem;
+        }
+        .content-1 {
+          h1 {
+            font-size: 5rem;
+          }
+          h3 {
+            font-size: 3.5rem;
+          }
+          p {
+            font-size: 2.5rem;
+          }
+        }
+        .content-2 p,
+        .content-4 p,
+        .content-6 p,
+        .content-8 p,
+        .content-10 p,
+        .content-12 p {
+          font-size: 2.5rem;
+        }
+        aside img {
+          object-fit: cover;
+        }
+      }
+    }
+  }
+}

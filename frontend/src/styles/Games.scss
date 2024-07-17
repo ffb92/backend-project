@@ -1,0 +1,126 @@
+// Variables
+$primary-color: #4CAF50;
+$secondary-color: #f44336;
+$background-color: #f9f9f9;
+$border-color: #ddd;
+$table-header-bg: #f2f2f2;
+$table-header-color: #333;
+
+// Base Styles
+body {
+  font-family: Arial, sans-serif;
+  background-color: $background-color;
+  margin: 0;
+}
+
+
+
+// Table Styles
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px;
+  font-size: 56px;
+  text-align: left;
+
+  th, td {
+    padding: 12px 15px;
+    border: 1px solid $border-color;
+  }
+
+  th {
+    background-color: $table-header-bg;
+    color: $table-header-color;
+  }
+
+  tr {
+    &:nth-child(even) {
+      // background-color: #f2f2f2;
+    }
+    
+    &:hover {
+      // background-color: #f1f1f1;
+    }
+  }
+}
+
+// Form Styles
+.form-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+
+  form {
+    width: 48%;
+
+    h2 {
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid $border-color;
+      border-radius: 5px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: $primary-color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+// Delete Button Styles
+button.delete-btn {
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+
+// Import Button Styles
+button.import-btn {
+  background-color: $primary-color;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
